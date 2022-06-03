@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(23, 27, 30)
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: rgb(255, 128, 128);
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: url("assets/kadek.png"), auto;;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+  border-bottom: 5px solid rgb(255, 153, 153);
+}
+
+.tablink:hover {
+  background-color: rgb(255, 209, 129);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+#test {background-color: rgb(255, 179, 179);
+  cursor: url("assets/cursor\ \(1\).cur"), ;}
+#Home {background-color: rgb(255, 179, 179);}
+#News {background-color: rgb(255, 179, 179);}
+#Contact {background-color: rgb(255, 179, 179);}
+#About {background-color: rgb(255, 179, 179);}
