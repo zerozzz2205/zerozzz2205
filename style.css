@@ -38,9 +38,9 @@ body, html {
 }
 
 
-#test {background-color: rgb(255, 179, 179);
+#test {background-image: "assets/background.jpg");
   cursor: url("assets/cursor\ \(1\).cur"), ;}
-#Home {background-color: rgb(255, 179, 179);}
-#News {background-color: rgb(255, 179, 179);}
-#Contact {background-color: rgb(255, 179, 179);}
-#About {background-color: rgb(255, 179, 179);}
+#Home {background-image: "assets/background.jpg"}
+#News {background-image: "assets/background.jpg"}
+#Contact {background-image: "assets/background.jpg"}
+#About {background-image: "assets/background.jpg"}
