@@ -1,28 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulang Tahun Pacarmu</title>
     <style>
-        /* Global CSS styles */
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            background-color: #f5f5f5;
+            background-image: url("Zz0zZTliMjQ4MzhlNGExMWViYmJiMjFiZTI2ZWNmN2MzZA==.jpg");
+            color: #ffffff;
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
+            background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
         }
-
+        .menu {
+          width: 260px;
+          margin: 60px auto 0;
+          cursor: pointer;
+        }
+        .title {
+          width: 100%;
+          box-sizing: border-box;
+          background: #fff;
+          padding: 14px;
+          border-radius: 4px;
+          position: relative;
+          box-shadow: 0 0 40px -10px #000;
+          color: #505050;
+        }
+        span {
+          float: right;
+          font-size: 18px !important;
+        }
+        .dropdown {
+          width: 100%;
+          background: #fff;
+          border-radius: 4px;
+          box-shadow: 0 0 40px -10px #000;
+          color: #505050;
+          margin-top: 24px;
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.5s;
+        }
+        .down {
+          max-height: none;
+        }
+        .arrow {
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #fff;
+          position: absolute;
+          right: 20px;
+          bottom: -24px;
+          display: none;
+        }
+        .arrow.gone {
+          display: block;
+        }
+        li {
+          background: #FDCEDF;
+         
+          margin: 0;
+          transition: all 0.1s;
+        }
+        li:hover {
+          background: #F2BED1;
+          -webkit-transform: scale(1.05);
+          color: rgba(255, 255, 255, 0.8);
+          
+          box-shadow: 0 0 30px -10px #000;
+        }
+    
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            opacity: 0;
+            cursor: pointer;
+            box-shadow: 0 0 30px -10px #000;
+            border-radius: 5px;
+        }
+        
+        .navbar-toggle {
+            display: none;
+        }
+        
+        .navbar-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-radius: 5px;
+            background-color: #FDCEDF;
+        }
+        
+        .navbar-menu li {
+          border-radius: 5px;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .navbar-menu a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        
+        .navbar-menu a:hover {
+            background-color: none;
+            
+        }
+        
+        .navbar.fade-in {
+            opacity: 1;
+        }
+        
+        .navbar.fade-in .navbar-menu li {
+            opacity: 1;
+        }
+        
+        @media only screen {
+            .navbar {
+                position: fixed;
+                margin-bottom: 20px;
+            }
+            
+            .navbar-menu {
+                display: none;
+                
+            }
+            
+            .navbar-toggle {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 1;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                background-color: transparent;
+                border: none;
+            }
+            
+            .navbar-toggle:focus {
+                outline: none;
+            }
+            
+            .navbar-toggle span {
+                display: block;
+                width: 100%;
+                height: 4px;
+                background-color: #000000;
+                transition: transform 0.3s ease;
+            }
+    
+            .navbar-x :hover {
+                display: inline-block;
+                background-color: #fffdfd;
+                
+            }
+          
+            .navbar-toggle span:not(:last-child) {
+                margin-bottom: 5px;
+            }
+            
+            .navbar-toggle.open span:nth-child(1) {
+                transform: rotate(45deg) translateX(6.2px) translateY(6.2px);
+            }
+            
+            .navbar-toggle.open span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .navbar-toggle.open span:nth-child(3) {
+                transform: rotate(-45deg) translateX(6.2px) translateY(-6.2px);
+            }
+            
+            .navbar-toggle.open ~ .navbar-menu {
+                display: inline-block;
+            }
+        }
+        
         h1 {
-            text-align: center;
-            margin-top: 50px;
-            color: #333333;
+            font-size: 36px;
+            margin-top: 100px;
+            color: black;
         }
-
+        
+        p {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+        
+        .special-message {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+        
+        .navbar-toggle:hover span {
+            background-color: #ffffff;
+        }
+        .logo-wrapper {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .logo {
+            width: 70px;
+            height: 50px;
+            background-image: url("lovelogo3.png");
+            background-size: cover;
+            margin-right: 10px;
+        }
+        
+        .birthday-text {
+            font-size: 24px;
+            color:#505050;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -54,8 +269,27 @@
     </style>
 </head>
 <body>
-    <h1>Galeri Foto Bersama Pacar</h1>
-
+    <div class="navbar fade-in">
+        <button class="navbar-toggle" aria-label="Toggle Menu">
+          <div class="navbar-x">  
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>  
+        </button>
+        <ul class="navbar-menu">
+            <li><a href="https://zerozzz2205.github.io/zerozzz2205/">Beranda</a></li>
+            <li><a href="foto.html">Galeri Foto</a></li>
+            <li><a href="#">Kisah Cinta</a></li>
+            <li><a href="kembangapi.html">Kembang Api</a></li>
+            <li><a href="#">Playlist Musik</a></li>
+          </ul>
+    </div>
+    <div class="logo-wrapper">
+      <div class="logo"></div>
+      <div class="birthday-text"><b>Happy 19th years old, ia</b></div>
+  </div>
+    <h1> < Galeri Kita ></h1>
     <div class="gallery">
         <div class="gallery-item large">
             <img src="foto1.jpg" alt="Foto 1">
@@ -85,5 +319,31 @@
             <img src="foto9.jpg" alt="Foto 9">
         </div>
     </div>
+
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const navbar = document.querySelector('.navbar');
+
+        navbarToggle.addEventListener('click', function () {
+            this.classList.toggle('open');
+            navbarMenu.classList.toggle('open');
+        });
+
+        window.addEventListener('load', function() {
+            navbar.classList.add('fade-in');
+        });
+        function f() {
+  document.getElementsByClassName('dropdown')[0].classList.toggle('down');
+  document.getElementsByClassName('arrow')[0].classList.toggle('gone');
+  if (document.getElementsByClassName('dropdown')[0].classList.contains('down')) {
+    setTimeout(function() {
+      document.getElementsByClassName('dropdown')[0].style.overflow = 'visible'
+    }, 500)
+  } else {
+    document.getElementsByClassName('dropdown')[0].style.overflow = 'hidden'
+  }
+}
+    </script>
 </body>
 </html>
